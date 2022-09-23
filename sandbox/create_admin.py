@@ -7,9 +7,6 @@ def main():
     users = RedisUsersConnection()
 
     admin_id = users.id_by_username('admin')
-    if admin_id != b'':
-        print('Admin user already exists.')
-        exit(0)
 
     # Getting confd-credentials from yangcatalog config
     config = create_config()
